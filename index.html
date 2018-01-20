@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- 第一步 修改视口-->
+        <meta name="viewport" content="width=device-width">
+        <title>weather</title>
+        <link rel="stylesheet" href="css/index.css">
+        <!-- 2.引入rem.js -->
+        <script src="js/rem.js"></script>
+        <script src="font/iconfont.js"></script>
+        <script src="js/jquery3.2.1.min.js"></script>
+        <script src="js/index.js"></script>
+        <!-- 创建logo -->
+        <link rel="shortcut icon" href="img/40.png">
+    </head>
+    <style type="text/css">
+   .icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+          }
+    </style>
+    <body>
+    <!-- 屏幕开始 -->
+    <div class="screen">
+	    <div class="header"></div>
+	    <div class="box">
+	    	<h2>空气</h2>
+	    	<h3>轻度污染</h3>	
+	    </div>
+	    <div class="wd">0°</div>
+	    <div class="tqqk">晴</div>
+	    <div class="sd">湿度&nbsp;23%</div>
+	    <div class="ts">天冷了，注意保暖~</div>
+    </div>
+    <!--//屏幕结束 -->
+    <!-- 今日明日天气 -->
+    <div class="con1">
+        <div class="content">
+            <div class="top">
+                <span class="day">今天</span>
+               <div class="tem">
+                   <span class="high" id="dat_high_temperature">2</span>/
+                   <span class="low" id="dat_low_temperature">-11</span>℃
+               </div>
+            </div>
+            <div class="bottom">
+                   <span class="weather" id="day_condition">晴多云</span>
+                   <div class="pic" id="dat_weather_icon_id"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="top">
+                <span class="day">明天</span>
+               <div class="tem">
+                   <span class="high" id="tomorrow_high_temperature">3</span>/
+                   <span class="low" id="tomorrow_low_temperature">-13</span>℃
+               </div>
+            </div>
+            <div class="bottom">
+                   <span class="weather" id="tomorrow_condition">晴</span>
+                   <div class="pic" id="tomorrow_weather_icon_id"></div>
+            </div>
+        </div>
+    </div>
+    <!--//今日明日天气结束 -->
+    <!-- 实时天气 -->
+    <div class="con2">
+        <div class="wrap" id="now">
+            <!-- <div class="box">
+                <h2 class="now_time">12:00</h2>
+                <div class="now_icon"></div>
+                <h3 class="now_tem">-1°</h3>
+            </div> -->
+            
+        </div>
+    </div>       
+  
+    <div class="con3">
+        <div class="wrap" id="recent">
+            <!-- <div class="recent">
+                <div class="recent_time">
+                    <span class="month" ></span>
+                    <span class="day"></span>
+                </div> 
+                <h2 class="recent_wea" ></h2>
+                <div class="recent_pic"></div>
+                <h3 class="recent_high"></h3>
+                <h4 class="recent_low"></h4>
+                <h5 class="recent_wind"></h5>
+                <h6 class="recent_level"></h6>   
+            </div> -->
+            
+        </div>
+    </div>
+    <!-- 实时天气结束 -->
+    <!-- 选择城市 -->
+    <div class="city_box" style="display: none;">
+        <div class="sousuo_box">
+            <div class="search_box">
+                <svg class="icon" aria-hidden="true">
+                 <use xlink:href="#icon-sousuo"></use>
+                </svg>
+                <input type="text" placeholder="搜索市" class="text">
+            </div>
+            <div class="button">取消</div>
+        </div>
+        <div class="city" id="city">
+            <h1 class="title">热门城市</h1>
+            <div class="con">
+                <div class="son">北京</div>
+                <div class="son">上海</div>
+                <div class="son">广州</div>
+                <div class="son">深圳</div>
+                <div class="son">郑州</div>
+                <div class="son">西安</div>
+                <div class="son">南京</div>
+                <div class="son">杭州</div>
+                <div class="son">成都</div>
+                <div class="son">武汉</div>
+                <div class="son">太原</div>
+                <div class="son">石家庄</div>
+                <div class="son">朔州</div>
+            </div>
+        </div>
+    </div>
+    <!-- 选择城市结束 -->
+    </body>
+</html>
+<!--1.修改视口  -->
+<!--2.移动端用rem 电脑用px  引入rem.js-->
+<!--3.打开rem.js 修改设计稿的宽度  -->
+<!-- 设计 -->
+<!-- padding  不让用的  填充的；margin ：盒子与盒子之间的距离 -->
+<!-- 1.margin：0 auto   （div）
+2.text-align：center -->
+<!-- 盒子模型 宽 高  -->
